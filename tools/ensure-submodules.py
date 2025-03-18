@@ -7,7 +7,6 @@ from pathlib import Path
 SOURCE_ROOT = Path(__file__).resolve().parent.parent
 UPDATE_FLAGS = ["--init", "--depth", "1"]
 
-
 def main(argv: list[str]):
     names = argv[1:]
     if not names:
@@ -33,10 +32,8 @@ def main(argv: list[str]):
                     print(f"{label}:\n\t| " + "\n\t| ".join(data.strip().split("\n")), file=sys.stderr)
         sys.exit(1)
 
-
 def run(argv: list[str], **kwargs) -> subprocess.CompletedProcess:
     return subprocess.run(argv, capture_output=True, encoding="utf-8", check=True, **kwargs)
-
 
 if __name__ == "__main__":
     main(sys.argv)
