@@ -37,6 +37,6 @@ def main(argv: list[str]):
 def run(argv: list[str], **kwargs) -> subprocess.CompletedProcess:
     return subprocess.run(argv, capture_output=True, encoding="utf-8", check=True, **kwargs)
 
-
+#main
 if __name__ == "__main__":
     main(sys.argv)
